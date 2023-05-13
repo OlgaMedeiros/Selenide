@@ -8,12 +8,15 @@ import org.openqa.selenium.Keys;
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.concurrent.Callable;
 
 import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 public class SelenideTest {
+
+
     @BeforeEach
     void setUp() {
 
@@ -23,6 +26,8 @@ public class SelenideTest {
 
     @Test
     void shouldRegistrationCardDeliveryTest() {
+
+
         $("[data-test-id=city] input").setValue("Казань");
         $("[data-test-id=date] input") .setValue("17.05.2013");
         $("[data-test-id=name] input").setValue("Маркелова Ольга");
