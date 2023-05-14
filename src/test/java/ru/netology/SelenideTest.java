@@ -17,6 +17,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selenide.*;
 
 public class SelenideTest {
+
     int days = 3;
     DeliveryDays deliveryDays = new DeliveryDays();
 
@@ -29,6 +30,7 @@ public class SelenideTest {
 
     @Test
     void shouldRegistrationCardDeliveryTest() {
+
 
         $("[data-test-id='city'] input").setValue("Казань");
         $("[data-test-id='date'] input").doubleClick().sendKeys(Keys.BACK_SPACE);
