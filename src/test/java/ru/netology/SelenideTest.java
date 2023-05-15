@@ -40,10 +40,9 @@ public class SelenideTest {
         $("[data-test-id='agreement']").click();
         $$("button").find(exactText("Забронировать")).click();
 
-        $("[data-test-id='notification']").shouldHave(text("Встреча успешно забронирована"), Duration.ofSeconds(15));
-
+        $(".notification__content").shouldHave(Condition.text("Встреча успешно забронирована на " + deliveryDays.generateDate(days)), Duration.ofSeconds(15))
+                .shouldBe(Condition.visible);
     }
-
 
     }
 
